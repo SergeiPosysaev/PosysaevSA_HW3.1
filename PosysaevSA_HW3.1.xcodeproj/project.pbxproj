@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F98FACD52582237400624B1E /* PosysaevSA_HW3_1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FACD42582237400624B1E /* PosysaevSA_HW3_1App.swift */; };
-		F98FACD72582237400624B1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FACD62582237400624B1E /* ContentView.swift */; };
+		F98FACD72582237400624B1E /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FACD62582237400624B1E /* MainContentView.swift */; };
 		F98FACD92582237500624B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F98FACD82582237500624B1E /* Assets.xcassets */; };
 		F98FACDC2582237500624B1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F98FACDB2582237500624B1E /* Preview Assets.xcassets */; };
 		F98FACE92582246F00624B1E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FACE82582246F00624B1E /* Section.swift */; };
+		F98FACF52582750600624B1E /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F98FACF42582750600624B1E /* StartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F98FACD12582237400624B1E /* PosysaevSA_HW3.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PosysaevSA_HW3.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F98FACD42582237400624B1E /* PosysaevSA_HW3_1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosysaevSA_HW3_1App.swift; sourceTree = "<group>"; };
-		F98FACD62582237400624B1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F98FACD62582237400624B1E /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		F98FACD82582237500624B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F98FACDB2582237500624B1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F98FACDD2582237500624B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F98FACE82582246F00624B1E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		F98FACF42582750600624B1E /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 			isa = PBXGroup;
 			children = (
 				F98FACD42582237400624B1E /* PosysaevSA_HW3_1App.swift */,
-				F98FACD62582237400624B1E /* ContentView.swift */,
+				F98FACD62582237400624B1E /* MainContentView.swift */,
 				F98FACE82582246F00624B1E /* Section.swift */,
+				F98FACF42582750600624B1E /* StartButton.swift */,
 				F98FACD82582237500624B1E /* Assets.xcassets */,
 				F98FACDD2582237500624B1E /* Info.plist */,
 				F98FACDA2582237500624B1E /* Preview Content */,
@@ -142,7 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F98FACE92582246F00624B1E /* Section.swift in Sources */,
-				F98FACD72582237400624B1E /* ContentView.swift in Sources */,
+				F98FACD72582237400624B1E /* MainContentView.swift in Sources */,
+				F98FACF52582750600624B1E /* StartButton.swift in Sources */,
 				F98FACD52582237400624B1E /* PosysaevSA_HW3_1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
