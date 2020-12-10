@@ -9,27 +9,28 @@ import SwiftUI
 
 struct MainContentView: View {
     
+    let colors = [Color.red, .yellow, .green]
+
+    
     var body: some View {
-        VStack {
-            ZStack{
-                Rectangle()
-                    .frame(width: 150, height: 400)
-                    .background(Color.gray)
-                    .foregroundColor(.white)
-                    .border(Color.black, width: 3)
-                    .cornerRadius(10)
+        ZStack {
+            Color(.black)
+                .ignoresSafeArea()
+            VStack {
                 VStack {
-                    Section(color: .red)
-                    Section(color: .yellow)
-                    Section(color: .green)
+                    ForEach(0..<colors.count) {
+                        Section(color: colors[$0])
+                    }
                 }
+                .padding(.top, 10)
+                
+                Spacer()
+                
+                StartButton()
             }
-            
-            Spacer()
-            
-            StartButton()
-        }
+        } //
     }
+    
 }
 
 

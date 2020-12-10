@@ -9,14 +9,18 @@ import SwiftUI
 
 struct StartButton: View {
     @State private var showNext = false
+    @State private (set) var showColorSection = 0
     
     var body: some View {
         
         Button(action: {
-            if !showNext {
-                showNext.toggle()
-            }
+            if !showNext { showNext.toggle() }
             
+            showColorSection += 1
+            if showColorSection > 2 {
+                showColorSection = 0
+            }
+
         }) {
             let caption = showNext ? "NEXT" : "START"
             Text(caption)
@@ -25,16 +29,15 @@ struct StartButton: View {
                 .padding(.all, 10)
                 .padding(.horizontal, 50)
                 .shadow(color: Color.black,
-                        radius: 3.0,
-                        x: CGFloat(2),
+                        radius: 2.0,
+                        x: CGFloat(1),
                         y: CGFloat(2))
                 .accentColor(.yellow)
-                .border(Color.black, width: 3)
         }
-        .border(Color.white)
-        .background(Color.init(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)))
+        .background(Color.init(#colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)))
         .foregroundColor(.white)
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .overlay(RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.white, lineWidth: 4))
         .padding(.bottom, 30)
     }
 }

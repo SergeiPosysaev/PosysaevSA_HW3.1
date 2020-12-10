@@ -13,12 +13,12 @@ struct Section: View {
     var body: some View {
         ZStack {
             Circle()
+                .strokeBorder(Color.white, lineWidth: 3)
                 .frame(width: 100, height: 100)
                 .foregroundColor(color)
-                .opacity(0.1)
+               // .opacity(0.1)
         }
-    }
-    
+    }    
 }
 
 struct Section_Previews: PreviewProvider {
