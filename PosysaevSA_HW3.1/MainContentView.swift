@@ -9,8 +9,7 @@ import SwiftUI
 
 struct MainContentView: View {
     
-    let colors = [Color.red, .yellow, .green]
-    @State private var showColorSection = 0
+    @State private var showColorSection = 100
     
     var body: some View {
         ZStack {
@@ -18,22 +17,19 @@ struct MainContentView: View {
                 .ignoresSafeArea()
             VStack {
                 VStack {
-                    ForEach(0..<colors.count) {
-                        Section(color: colors[$0])
-                    }
-                    Text("\(showColorSection)")
-                        .foregroundColor(.white)
-                        .font(.largeTitle)
+                    Section(color: Color.red)
+                        .opacity(showColorSection == 0 ? 1 : 0.3)
+                    Section(color: Color.yellow)
+                        .opacity(showColorSection == 1 ? 1 : 0.3)
+                    Section(color: Color.green)
+                        .opacity(showColorSection == 2 ? 1 : 0.3)
                 }
                 .padding(.top, 10)
-                
                 Spacer()
-                
                 StartButton(showColorSection: $showColorSection)
             }
         }
-    }
-    
+    }    
 }
 
 
