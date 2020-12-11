@@ -10,7 +10,7 @@ import SwiftUI
 struct MainContentView: View {
     
     let colors = [Color.red, .yellow, .green]
-
+    @State private var showColorSection = 0
     
     var body: some View {
         ZStack {
@@ -21,20 +21,23 @@ struct MainContentView: View {
                     ForEach(0..<colors.count) {
                         Section(color: colors[$0])
                     }
+                    Text("\(showColorSection)")
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
                 }
                 .padding(.top, 10)
                 
                 Spacer()
                 
-                StartButton()
+                StartButton(showColorSection: $showColorSection)
             }
-        } //
+        }
     }
     
 }
 
 
-//
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainContentView()

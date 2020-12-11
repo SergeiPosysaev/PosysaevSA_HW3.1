@@ -9,7 +9,8 @@ import SwiftUI
 
 struct StartButton: View {
     @State private var showNext = false
-    @State private (set) var showColorSection = 0
+   // @State var showColorSection = 0
+    @Binding var showColorSection: Int
     
     var body: some View {
         
@@ -44,6 +45,6 @@ struct StartButton: View {
 
 struct StartButton_Previews: PreviewProvider {
     static var previews: some View {
-        StartButton()
+        MainContentView()
     }
 }
