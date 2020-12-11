@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct Section: View {
+    
     var color: Color
     
     var body: some View {
         ZStack {
             Circle()
+                .fill(color)
                 .frame(width: 100, height: 100)
-                .foregroundColor(color)
-                .opacity(0.5)
+                .overlay(Circle()
+                            .stroke(Color.white, lineWidth: 4))
         }
-    }
-    
+    }    
 }
 
 struct Section_Previews: PreviewProvider {
     static var previews: some View {
-        Section(color: .red)
+        MainContentView()
     }
 }
